@@ -1,0 +1,83 @@
+body{
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.juego{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.palabra{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.letra{
+    width: 80px; 
+    height: 80px;
+    border: none;
+    background-color: rgb(54, 101, 128);
+    font-size: 50px;
+    text-transform:uppercase;
+    color: azure;
+    text-align: center;
+}
+.fin{
+    text-align: center;
+}
+.button{
+    margin: auto;
+    position: relative;
+    display: block;
+    font-weight: 100;
+    background: #ffffff ;
+    border: 1px solid rgba(#3DB74E, 1);
+    text-decoration: none;
+    color: #3DB74E;
+    padding: 15px 20px;
+    box-shadow: 3px 3px 0px rgba(#3DB74E, 0.5);
+}
+.button:hover{
+    border: 2px solid blueviolet;
+    background-color: whitesmoke;
+    color: blueviolet;
+    cursor: pointer;
+}
+.correcta{
+    color: #ffffff;
+    background-color: #3DB74E;
+    border: 2px solid #dc85ff;
+}
+.semicorrecta{
+    color: #FFFB7D;
+    background-color: darkgrey;
+}
+.error{
+    color: darkgrey;
+}
+.centrado header {
+    background-color: #f0f0f0;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+.centrado li {
+    flex-basis: 100%;
+    margin-right: 10px;
+  }
+  
+.centrado nav {
+    display: flex;
+  }
