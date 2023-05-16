@@ -80,6 +80,9 @@ function msFinal(msg){
                         
         })
 }
+setTimeout(function() {
+    msFinal('Oops, tardaste demasiado')
+  }, 60000);
 function general(fila){
     var letras =fila.querySelectorAll('.letra');
     letras= [...letras];
