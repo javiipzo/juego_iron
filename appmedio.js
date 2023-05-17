@@ -1,3 +1,4 @@
+//Creo una lista con palabras de unas 6 letras y una funcion para escoger una al azar, una vez elegida creo cuadrados por el numero de letras que haya.
 var palabras = ["amoros", "arriba", "belleza", "bolsas", "bronce", "cadena", "camino", "carter", "casino", "cubrir", "dedica", "dulces", "esfuer", "espada", "esquí", "famosa", "fuerte", "gemelo", "guitar", "hablar", "honest", "inmens", "inviern", "juntas", "leal", "marina", "moda", "nublado", "número", "orgull", "parque", "pechos", "piedra", "precio", "quemar", "rápido", "rocas", "seguro", "selva", "sencil", "tímido", "triste", "unidos", "vender", "viento", "voces", "zombis", "zorro"];
 var resultado=document.querySelector('.fin')
 var idFila=1;
@@ -21,7 +22,7 @@ focus(fila);
 
 
 
-
+//Funcion para comprobar si las letras estan en la palabra y estan en la posición correcta
 function comparacion(arr1,arr2){
     var indexeq=[]
     arr1.forEach((element, index)=>{
@@ -36,6 +37,7 @@ function comparacion(arr1,arr2){
     })
     return indexeq
 }
+//Funcion para comprobar si las letras estan dentro de la palabra pero no en la posición correcta
 function estaDentro(arr1, arr2){
     var indexDentro=[]
     arr2.forEach((element,index)=>{
@@ -45,6 +47,7 @@ function estaDentro(arr1, arr2){
     });
     return indexDentro;
 }
+//Funcion para crear una nueva fila a la cual dentro meteremos cada cuadrado
 function crearFila(){
     idFila++
     if (idFila <=10){
@@ -57,6 +60,7 @@ function crearFila(){
         msFinal(`Intentalo otra vez! La palabra era "${word.toUpperCase()}"`)
     }
 }
+//Funcion para crear cuadrados para cada letra que tenga la palabra
 function HacerCuadrados(fila){
     arr.forEach((item, index) =>{
         if (index == 0){
@@ -66,11 +70,12 @@ function HacerCuadrados(fila){
         }
     })
 }
+//Funcion para escoger y señalar que cuadrado tenemos que introducir ahora.
 function focus(fila){
     var elementofocus=fila.querySelector('.focus');
 elementofocus.focus();
 }
-
+//Funcion para saltar con un mensaje final cuando ganas, pierdes, o te pasas de tiempo, y que aparezca el boton
 function msFinal(msg){
     resultado.innerHTML= `<p> ${msg}</p>
                         <button type="button" class="button">Nuevo Juego</button>`
@@ -80,9 +85,11 @@ function msFinal(msg){
                         
         })
 }
+//establezco el tiempo limite
 setTimeout(function() {
     msFinal('Oops, tardaste demasiado')
   }, 100000);
+//main
 function general(fila){
     var letras =fila.querySelectorAll('.letra');
     letras= [...letras];
